@@ -2,7 +2,7 @@ pipeline{
    agent any
    stages {
        stage ('Hello example'){
-           stage{ 
+           steps{ 
                  ehco 'Hello Jen'
                 }
             }
