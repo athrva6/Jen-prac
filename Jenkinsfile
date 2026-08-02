@@ -3,7 +3,7 @@ pipeline{
    stages {
        stage ('Hello example'){
            steps{ 
-                 ehco 'Hello Jen'
+                 echo 'Hello Jen'
                 }
             }
        }
