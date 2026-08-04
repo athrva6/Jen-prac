@@ -1,17 +1,14 @@
-pipeline{
-      agent any
-     environment{
-        APP_NAME = 'demo-app'
-         }
-    stages{
+pipeline {
+   agent any
+     stages{
        stage ('Build'){
-
-            environment{
-          BUILD_MODE='production'
-                }
-            steps{
-               sh 'echo $APP_NAME $BUILD_MODE'
-                }
-           }
-     }
+      step {  echo'Building' }
+         }
+      stage ('Test'){
+        step { echo 'testing'}
+        }
+      stage ('Done'){
+       step {echo 'Program executed'}
+         }
+   }
 }
